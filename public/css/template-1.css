@@ -178,3 +178,7 @@
 h1 {
   text-shadow: 0px 0px 10px rgba(0, 60, 255, 0.384);
 }
+
+.plans-card:nth-child(2) {
+  visibility: hidden;
+}
