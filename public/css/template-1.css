@@ -94,7 +94,7 @@
 
 .hero-text {
   color: #212529;
-  font-size: 20px;
+  font-size: 28px;
   text-align: center;
   max-width: 585px;
   margin: 0 auto;
@@ -182,3 +182,35 @@ h1 {
 .plans-card:nth-child(2) {
   visibility: hidden;
 }
+
+.hero-text {
+  background: gray;
+
+  white-space: pre-line;
+}
+
+.hero-title {
+  max-width: 660px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  height: 65px;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+body {
+  background: red;
+}
+
+.page {
+  background-color: transparent;
+}
+
+.hero-text {
+  background-image: url('/img/test.png');
+}
+
+
