@@ -27,6 +27,26 @@
 			{{/each}}
 		</main>
 	</div>
+
+	<div class="page-block">
+		<div class="calc">
+			<table class="table">
+				<caption>My table</caption>
+				<tbody>
+					{{#each footer}}
+						<tr>
+							{{#each links}}
+								<td>
+									{{text}}
+								</td>
+							{{/each}}
+							<td></td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+	</div>
 	
 	<div class="page-block">
 		<footer class="row g-0 footer">

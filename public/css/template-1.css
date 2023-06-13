@@ -1,3 +1,8 @@
+:root {
+  --text-color: #252921;
+  --space-medium: 24px;
+}
+
 .page {
   background: #b5b5b5;
   padding: 0 15px;
@@ -9,7 +14,7 @@
 }
 
 .header {
-  padding: 24px;
+  padding: var(--space-medium);
 
   border-bottom: 1px solid #dee2e6;
 }
@@ -37,6 +42,7 @@
 .nav1-link:hover {
   text-decoration: underline;
   color: blue;
+  opacity: 50%;
 }
 
 .nav1-vertical > .nav1-link {
@@ -44,7 +50,7 @@
 }
 
 .nav1-inline > .nav1-link:not(:last-child) {
-  margin-right: 24px;
+  margin-right: var(--space-medium);
 }
 
 .nav1-vertical > .nav1-link:not(:last-child) {
@@ -61,7 +67,7 @@
 }
 
 .footer {
-  padding: 24px 0;
+  padding: var(--space-medium) 0;
 
   border-top: 1px solid #dee2e6;
 }
@@ -77,7 +83,7 @@
 
 .footer-title {
   font-size: 20px;
-  color: #212529;
+  color: var(--text-color, #212529);
 
   display: block;
 
@@ -86,14 +92,14 @@
 
 .hero-title {
   font-size: 56px;
-  color: #212529;
+  color: var(--text-color, #212529);
   font-weight: 500;
   margin-bottom: 12px;
   text-align: center;
 }
 
 .hero-text {
-  color: #212529;
+  color: var(--text-color, #212529);
   font-size: 28px;
   text-align: center;
   max-width: 585px;
@@ -101,14 +107,14 @@
 }
 
 .plans-card:not(:last-of-type) {
-  margin-right: 24px;
+  margin-right: var(--space-medium);
 }
 
 .card-header {
   padding: 12px;
   text-align: center;
-  font-size: 24px;
-  color: #212529;
+  font-size: var(--space-medium);
+  color: var(--text-color, #212529);
 }
 
 .card-body {
@@ -117,7 +123,7 @@
 
 .card-price-amount {
   font-size: 40px;
-  color: #212529;
+  color: var(--text-color, #212529);
 }
 
 .card-price-duration {
@@ -131,12 +137,12 @@
 }
 
 .card-block:not(:last-of-type) {
-  margin-bottom: 24px;
+  margin-bottom: var(--space-medium);
 }
 
 .card-description-item {
   font-size: 16px;
-  color: #212529;
+  color: var(--text-color, #212529);
 
   display: block;
 }
@@ -163,8 +169,8 @@
   outline-offset: 5px;
 
   box-shadow: 5px 5px 10px 1px #3982e0a8;
-
   cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .btn {
@@ -201,16 +207,87 @@ h1 {
   white-space: nowrap;
 }
 
-body {
-  background: red;
-}
-
 .page {
-  background-color: transparent;
+  /* background-image: url('/img/test2.png');
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  background-attachment: fixed;
+
+  background-size: cover; */
 }
 
 .hero-text {
-  background-image: url('/img/test.png');
+  padding: 40px;
+  color: white;
+
+  border-image-source: url('/img/test2.png');
+  border-image-width: 10% 10%;
+  border-image-slice: 10% 10%;
 }
 
+.card-block {
+  /* list-style-type: upper-alpha; */
+  list-style-position: inside;
 
+  list-style-image: linear-gradient(
+    to bottom right,
+    blue,
+    red
+  );
+
+  padding: 0;
+}
+
+.card-description-item {
+  display: list-item;
+}
+
+/* .table tr {
+  border: 1px solid rgb(83, 70, 70);
+} */
+
+.table tr td {
+  border: 1px solid rgb(163, 85, 85);
+  border-bottom-color: red;
+  border-right-color: blue;
+}
+
+.table {
+  table-layout: fixed;
+  width: 600px;
+
+  border-collapse: unset;
+  border-spacing: 20px 10px;
+  caption-side: bottom;
+  empty-cells: hide;
+}
+
+.nav1-link::before,
+.nav1-link::after {
+  /* content: url('/img/test2.png'); */
+
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-image: url('/img/test2.png');
+}
+
+.nav1-link::before {
+  margin-right: 15px;
+}
+
+.nav1-link::after {
+  margin-left: 15px;
+}
+
+.calc {
+  width: 600px;
+
+  margin: 0;
+
+  /* margin-right: calc(100% - 600px); */
+}
