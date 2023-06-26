@@ -1,0 +1,86 @@
+
+
+<header class='header '>
+	<a href="#test">
+		{{> logo}}
+	</a>
+
+	<nav class='header-nav'>
+		<div class="header-nav1-right">
+			{{> nav1 list=header }}
+		</div>
+	</nav>
+</header>
+
+<main class="main">
+	{{#with messages}}
+		<div class="messages">
+			<h1 class="messages-title">{{title}}</h1>
+
+			{{#each list}}
+				
+				<div class="msg">
+					<strong class="msg-name">{{name}}</strong>
+					<p class="msg-text">{{message}}</p>
+					<span class="msg-day">{{day}}</span>
+				</div>
+			{{/each}}
+
+			<a href="#" class="messages-link">All messages</a>
+		</div>
+	{{/with}}
+	
+
+	{{#with form}}
+		<form class="form">
+			<h2 class="form-title">{{title}}</h2>
+
+			<div class="form-input-list">
+				{{#each inputs}}	
+					<input type="{{type}}" placeholder="{{placeholder}}" 
+					class="form-input" name="{{name}}" id="form-input-{{id}}">
+				{{/each}}
+			</div>
+
+			<div class="form-ceckbox">
+				<input type="checkbox" name="{{checkbox.name}}" id="{{checkbox.name}}">
+				<div></div>
+				<label for="{{checkbox.name}}">{{checkbox.label}}</label>
+			</div>
+
+			<button type="submit" class="form-button">{{button}}</button>
+			<p class="form-info">{{info}}</p>
+		</form>
+	{{/with}}
+
+</main>
+
+<div class="advantages">
+	{{#each advantages}}
+		<div>
+			<strong>
+				{{title}}
+			</strong>
+			<p>
+				{{text}}
+			</p>
+		</div>
+	{{/each}}
+</div>
+
+<footer class="page-block">
+	<div class="footer" id="test">
+		<div>
+			{{> logo}}
+			<span class="footer-copyright">Copyright 2023-2024</span>
+		</div>
+
+		{{#each footer}}
+		<div>
+			<span class="footer-title">{{title}}</span>
+			{{> nav1 list=links isVertical=true}}
+		</div>
+		{{/each}}
+	</div>
+</footer>
+
