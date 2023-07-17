@@ -149,8 +149,8 @@
 }
 
 .messages {
-  max-width: 620px;
-  width: 100%;
+  /* max-width: 620px;
+  width: 100%; */
 
   background-color: var(--color-white);
   border-radius: var(--border-radius-d);
@@ -229,7 +229,8 @@
   gap: var(--size-l);
 }
 
-.advantages > div {
+.advantages > div,
+.advantag {
   display: flex;
   flex-direction: column;
   border: 1px solid #e4eaf2;
@@ -240,13 +241,15 @@
   /* width: 100%; */
 }
 
-.advantages > div > strong {
+.advantages > div > strong,
+.advantag > strong {
   color: var(--color-title);
   font-weight: var(--weigth-title);
   font-size: 18px;
 }
 
-.advantages > div > p {
+.advantages > div > p,
+.advantag > p {
   color: #767676;
   font-size: var(--size-d);
   line-height: 150%;
@@ -258,8 +261,8 @@
 }
 
 .form {
-  max-width: 340px;
-  width: 100%;
+  /* max-width: 340px;
+  width: 100%; */
 
   background-color: var(--color-white);
   border-radius: var(--border-radius-d);
@@ -352,3 +355,85 @@
   font-size: var(--size-d);
   cursor: pointer;
 }
+
+.advantages {
+  display: grid;
+
+  height: 800px;
+
+  /* grid-template-columns: repeat(
+    auto-fit,
+    minmax(320px, 1fr)
+  ); */
+
+  /* grid-template-rows: repeat(2, 1fr); */
+  grid-template-columns: repeat(1, 1fr);
+
+  place-content: flex-end flex-end;
+
+  justify-items: flex-end center;
+
+  grid-auto-rows: 120px;
+}
+
+.advantages > div:first-of-type {
+  place-self: flex-start flex-start;
+}
+
+.main {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* grid-template-areas: 'messages messages form' 'advantages advantages advantages'; */
+
+  grid-auto-rows: 2fr;
+}
+
+.messages {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.form {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+}
+.advantages {
+  /* grid-column: 1 / 3; */
+  grid-row: 3 / 4;
+}
+
+.advantag {
+  height: 100%;
+}
+
+.footer {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-auto-columns: 3fr;
+
+  grid-auto-flow: row dense;
+}
+
+/* .footer > div {
+  background-color: #767676;
+} */
+
+/* .footer > div:first-of-type {
+  grid-column: 1 / 4;
+
+  background: rgb(255, 99, 99);
+}
+
+.footer > div:nth-of-type(2) {
+  grid-column: 1 / 4;
+
+  background: rgb(101, 101, 251);
+} */
+
+/* .footer > div:nth-of-type(2) {
+  order: -1;
+} */

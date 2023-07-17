@@ -53,20 +53,25 @@
 		</form>
 	{{/with}}
 
+		{{#each advantages}}
+			<div class="advantag">
+				<strong>{{title}}</strong>
+				<p>{{text}}</p>
+			</div>
+		{{/each}}
+
 </main>
 
 <div class="advantages">
 	{{#each advantages}}
-		<div>
-			<strong>
-				{{title}}
-			</strong>
-			<p>
-				{{text}}
-			</p>
-		</div>
-	{{/each}}
+			<div>
+				<strong>{{title}}</strong>
+				<p>{{text}}</p>
+			</div>
+		{{/each}}
 </div>
+
+
 
 <footer class="page-block">
 	<div class="footer" id="test">
@@ -82,5 +87,6 @@
 		</div>
 		{{/each}}
 	</div>
+	
 </footer>
 
