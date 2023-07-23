@@ -13,27 +13,29 @@
 </header>
 
 {{#with hero}}
-	<div class="hero">
-		<div class="hero-content">
-			<h1 class="hero-title">{{title}}</h1>
-			<p class="hero-text">{{text}}</p>
-		</div>
-		<div class="hero-slider">
-			<div class="hero-slider-icon hero-slider-left">{{left}}</div>
-			<img src="{{photo}}" alt="Hero image" class="hero-image">
-			<div class="hero-slider-icon hero-slider-right">{{right}}</div>
+	<div class="hero-container">
+		<div class="hero">
+			<div class="hero-content">
+				<h1 class="hero-title">{{title}}</h1>
+				<p class="hero-text">{{text}}</p>
+			</div>
+			<div class="hero-slider">
+				<div class="hero-slider-icon hero-slider-left">{{left}}</div>
+				<img src="{{photo}}" alt="Hero image" class="hero-image">
+				<div class="hero-slider-icon hero-slider-right">{{right}}</div>
+			</div>
 		</div>
 	</div>
 {{/with}}
 
-<input type="text" class="input">
+{{!-- <input type="text" class="input"> --}}
 
-<div class="modal">
+{{!-- <div class="modal">
 	{{hero.text}} {{hero.text}}	
-	{{!-- <img src="{{hero.photo}}" alt="Hero image" class="modal-image"> --}}
+	<img src="{{hero.photo}}" alt="Hero image" class="modal-image">
 	<div class="modal-text">{{hero.text}} {{hero.text}}</div>	
 	
-</div>
+</div> --}}
 
 <main class="blog">
 	{{#each blog}}
@@ -57,7 +59,7 @@
 	<div class="form">
 		<div class="form-content">
 			<h3 class="form-title">{{title}}</h3>
-			<p class="form-info">{{info}}</p>
+			<p class="form-info">{{info}}<span class="ex">x</span></p>
 		</div>
 		<div class="form-action">
 			<a href="{{href}}" class="button form-button">{{button}}</a>
@@ -80,4 +82,7 @@
 		{{/each}}
 	</div>
 </footer>
+
+<div class="test">Test</div>
+	
 
